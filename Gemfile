@@ -17,11 +17,14 @@ gem 'mail_form'
 gem 'simple_form'
 gem 'devise'
 gem 'friendly_id', '~> 5.1.0'
+gem 'tilt', '>= 1.3.4', '~> 1.3'
+gem 'sinatra', '>= 1.4.4'
 #Gems for image management
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'fog-aws'
 gem 'unf'
+gem "figaro"
 
 group :development, :test do
   gem 'byebug'
