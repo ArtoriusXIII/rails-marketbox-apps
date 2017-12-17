@@ -20,7 +20,7 @@ gem 'friendly_id', '~> 5.1.0'
 gem 'tilt', '>= 1.3.4', '~> 1.3'
 gem 'sinatra', '>= 1.4.4'
 #Gems for image management
-gem 'carrierwave'
+gem 'carrierwave', '~> 1.0'
 gem 'mini_magick'
 gem 'fog-aws'
 gem 'unf'
