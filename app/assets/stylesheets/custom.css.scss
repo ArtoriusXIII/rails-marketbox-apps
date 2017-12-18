@@ -1,0 +1,25 @@
+@import "bootstrap";
+
+body{
+    background-color: #E6E6FA;
+    color: #333333;
+
+    /* This text is in Georgia */
+	  font-family: Georgia,Times,Times New Roman,serif; 
+
+}
+.navbar-default{
+    background-color: #444444;
+}
+.navbar-default .navbar-brand{
+    font-family: guardian-egyptt, georgia, serif;
+    font-weight: 400;
+    color: #d5641c;
+    font-size: 30px;
+}
+.navbar-default .navbar-nav > li> a {
+    font-family: Georgia,Times,Times New Roman,serif; 
+    font-weight: bold;
+    color: #0192B5;
+    font-size: 15px; 
+}
