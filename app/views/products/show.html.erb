@@ -1,21 +1,18 @@
+<div class="row">
+  <div class="col-md-3">
+    <div class="thumbnail">
+      <%= image_tag @product.image.large.url %>
+    </div>
+  </div>
 
+  <div class="col-md-6">
+    <h3><%= @product.name %></h3>
+    <h4><%= number_to_currency(@product.price, :unit => "€") %></h4>
+    <p><%= @product.description %></p>
+  </div>
   
-  <%= image_tag(@product.image.large.url) %>
-
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @product.price %>
-</p>
+  
+</div>  
 
 <%= link_to 'Edit', edit_product_path(@product), class: "btn btn-info" %> |
 <%= link_to 'Back', products_path, class: "btn btn-info" %>
