@@ -1,5 +1,4 @@
 module DeviseHelper
-
   def devise_error_messages!
     return "" if resource.errors.empty?
   
@@ -11,7 +10,7 @@ module DeviseHelper
     html = <<-HTML
     <div class= "alert alert-danger alert-dismissable"> 
      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-      <h3>#{sentence}</h3>
+      <h4>#{sentence}</h4>
       <ul>#{messages}</ul>
     </div>
     HTML

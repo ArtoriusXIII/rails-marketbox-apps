@@ -8,7 +8,8 @@
 </head>
 <body>
   
-    <%= render 'layouts/header' %>
+  <%= render 'layouts/header' %>
+  
   <div class="container">
     <% flash.each do |name, msg|  %>
         <% if msg.is_a?(String) %>
@@ -23,8 +24,6 @@
     <%= render 'layouts/footer' %>
   </div>
     
-  
-
 </body>
 </html>
 
