@@ -1,5 +1,6 @@
 <h1>Listing Products</h1>
-<div class="centre">
+<hr>
+<div align="center">
   <div class="row">
     <% @products.each do |product| %>
         <div class="col-md-3">
@@ -8,6 +9,7 @@
             <div class="caption">
               <h3><%= product.name %></h3>
               <p><%= number_to_currency(product.price, :unit => "€") %></p>
+              <p><%="Sold by #{product.user.username}" %></p>
                 <%= link_to 'Edit', edit_product_path(product), class: "btn btn-primary" %>
                 <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-warning" %>
             </div>
