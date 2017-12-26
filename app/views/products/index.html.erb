@@ -1,7 +1,13 @@
-<div class="center">
+
+
+<div class="center-products">
   <h1>Listing Products</h1>
 </div>
 <hr>
+<div class="right">
+  <%= link_to 'Add a new product', new_product_path, class: "btn btn-secondary btn-lg active" %>
+</div>
+</br>
 <div class="center">
   <div class="row">
     <% @products.each do |product| %>
@@ -49,4 +55,4 @@
 <br>
 
 
-<%= link_to 'New Product', new_product_path, class: "btn btn-primary" %>
+

@@ -1,0 +1,40 @@
+<div class="right">
+  <%= link_to 'Add a new product', new_product_path, class: "btn btn-secondary btn-lg active" %>
+</div>
+</br>
+
+<table class="table table-striped table-hover table-bordered">
+  <thead class="thead-dark">
+    <tr>
+      <th>Name</th>
+      <th>Image</th>
+      <th>Description</th>
+      <th>Price</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody class="tbody-color">
+    <% @products.each do |product| %>
+      <tr>
+        <td><%= product.name %></td>
+        <td><%= link_to image_tag(product.image.url), product %></td>
+        <td><%= product.description %></td>
+        <td><%= product.price %></td>
+        <td>
+          <div class="btn-group">
+            <button type="button" class="btn active dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+              <li><%= link_to 'Edit', edit_product_path(product), class: "btn btn-default btn-sm" %></li>
+              <li><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default btn-sm" %></li>
+            </ul>
+          </div>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</hr>
+
+

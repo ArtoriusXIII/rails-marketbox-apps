@@ -1,7 +1,15 @@
+@import "bootstrap-sprockets";
 @import "bootstrap";
+
+html {
+overflow-y: scroll;
+}
 
 body{
     background-color: #E6E6FA;
+    /*background-color: #82a43a;*/
+    /*background-color: #1a8191;*/
+    
     color: #333333;
 
     /* This text is in Georgia */
@@ -26,11 +34,16 @@ body{
 .center{
     text-align: center;
 }
-.col-md-3:nth-child(4n+1){
-    clear: left;
-}
-.col-md-6{
-    h3{font-size: 45px;}
-    h4{font-size: 26px;}
-    p {font-size: 17px;}
-}
+
+
+@import "welcome";
+@import "about";
+@import "contact";
+
+
+
+   
+
+
+
+
