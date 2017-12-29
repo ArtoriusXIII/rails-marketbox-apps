@@ -1,5 +1,11 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "normalize";
+
+$dark: #424652;
+$light: #9a9da4;
+$highlight: #8bc6db;
+$border: #E9E9E9;
 
 html {
 overflow-y: scroll;
@@ -31,10 +37,85 @@ body{
     color: #0192B5;
     font-size: 15px; 
 }
+.alert-error {
+background-color: #f2dede;
+border-color: #eed3d7;
+color: #b94a48;
+text-align: left;
+}
+
+.alert-alert {
+background-color: #f2dede;
+border-color: #eed3d7;
+color: #b94a48;
+text-align: left;
+}
+
+.alert-success {
+background-color: #dff0d8;
+border-color: #d6e9c6;
+color: #468847;
+text-align: left;
+}
+
+.alert-notice {
+background-color: #dff0d8;
+border-color: #d6e9c6;
+color: #468847;
+text-align: left;
+}
+hr{
+    width: 12em;
+    display: block;
+    height: 2px;
+  
+    background-color: #D5641C;
+    border-top: 3px solid $highlight;
+    text-align: center;
+    
+    
+}
 .center{
     text-align: center;
 }
 
+.btn {
+    padding: 10px 10px;
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.btn-primary {
+    background: #444444;
+    color: #ffffff;
+}
+
+.btn-outline{
+    	color: #D56328;
+        text-align: center;
+    }
+
+#footer{
+    padding: 2.5em 5%;
+    border-top: solid $border;
+    .copyright{
+        float: left;
+        font-size: .9am;
+        margin: 0;
+    }
+    nav{
+        float: right;
+        i{
+            color: $dark;
+            margin-left: 1em;
+            padding-top: .2em;
+            &:hover{
+                color: $highlight;
+            }
+        }
+    }
+}
 
 @import "welcome";
 @import "about";
