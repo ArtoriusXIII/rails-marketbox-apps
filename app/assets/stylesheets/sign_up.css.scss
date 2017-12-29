@@ -1,0 +1,37 @@
+
+.panel .panel-heading{
+  color: #444444;
+  background-color: #5E6D72;
+  text-align: center;
+}
+.panel-title{
+  color: #D5641C;
+  font-weight: 700;
+}
+.btn-warning{
+        background-color: #FFF;
+        color: #d58512;
+        border-color: #ed9c28;
+        border-radius: 25px;
+}
+
+.jumbotron-sign_up:after{
+  background-image: url('https://s3-eu-west-1.amazonaws.com/marketbag-secondhand/flea-market-selling.jpeg');
+  content: "";
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position: center center;
+  max-height: 100%;
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+
+}
+.container-fluid{
+  margin-right: 0px;
+    margin-left: 0px;
+}

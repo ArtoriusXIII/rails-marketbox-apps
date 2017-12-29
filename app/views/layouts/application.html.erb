@@ -6,6 +6,9 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
   <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
   <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
@@ -20,24 +23,22 @@
 <body>
   
   <%= render 'layouts/header' %>
-  
-  <div class="container">
-    <% flash.each do |name, msg|  %>
-        <% if msg.is_a?(String) %>
-          <div class="alert alert-<%= name == :notice ? "success" : "danger" %> alert-dismissable">
-            <button type="buton" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-            <%= content_tag :div, msg, :id => "flash_#{name}" %>
-          </div>
+
+    <div class="container">
+      <% flash.each do |name, msg|  %>
+          <% if msg.is_a?(String) %>
+            <div class="alert alert-<%= name == :notice ? "success" : "danger" %> alert-dismissable">
+              <button type="buton" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+              <%= content_tag :div, msg, :id => "flash_#{name}" %>
+            </div>
+          <% end %>
         <% end %>
-      <% end %>
-      
-    <%= yield %>
+        
+      <%= yield %>
+    </div>
     
+   <%= render 'layouts/footer' %>
   
-    <hr>
-    <%= render 'layouts/footer' %>
-  </div>
-    
 </body>
 </html>
 

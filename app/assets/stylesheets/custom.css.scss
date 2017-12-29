@@ -5,7 +5,7 @@
 $dark: #424652;
 $light: #9a9da4;
 $highlight: #8bc6db;
-$border: #E9E9E9;
+$border: #D5641C;
 
 html {
 overflow-y: scroll;
@@ -15,11 +15,30 @@ body{
     background-color: #E6E6FA;
     /*background-color: #82a43a;*/
     /*background-color: #1a8191;*/
-    
     color: #333333;
-
     /* This text is in Georgia */
-	  font-family: Georgia,Times,Times New Roman,serif; 
+	font-family: Georgia,Times,Times New Roman,serif; 
+	.jumbotron:after{
+      background-image: url('https://s3-eu-west-1.amazonaws.com/marketbag-secondhand/flea-market-selling.jpeg');
+      content: "";
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      max-height: 100%;
+      opacity: 0.3;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      z-index: -1;
+      
+
+    }
+    .container-fluid{
+      
+        margin: 0 0 0 0;
+    }
 
 }
 .navbar-default{
@@ -47,7 +66,6 @@ hr{
     border-top: 3px solid $highlight;
     text-align: center;
     
-    
 }
 .center{
     text-align: center;
@@ -56,7 +74,7 @@ hr{
 .btn {
     padding: 10px 10px;
     border: 0 none;
-    font-weight: 700;
+    font-weight: 700px;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
@@ -73,15 +91,21 @@ hr{
 #footer{
     padding: 2.5em 5%;
     border-top: solid $border;
+    background-color: #444444;
     .copyright{
         float: left;
         font-size: .9am;
         margin: 0;
+        color: $border;
+        &:hover{
+                color: $highlight;
+            }
+        
     }
     nav{
         float: right;
         i{
-            color: $dark;
+            color: $border;
             margin-left: 1em;
             padding-top: .2em;
             &:hover{
@@ -94,6 +118,9 @@ hr{
 @import "welcome";
 @import "about";
 @import "contact";
+@import "products";
+@import "sign_up";
+@import "sign_in";
 
 
 

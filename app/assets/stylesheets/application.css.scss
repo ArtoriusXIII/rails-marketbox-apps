@@ -1,12 +1,15 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import 'normalize';
 @import "custom";
 @import "welcome";
 @import "header";
 @import "products";
-@import "font-awesome-sprockets";
-@import "font-awesome";
-@import 'normalize';
+@import "sign_up";
+@import "sign_in";
+
 
 
 /*

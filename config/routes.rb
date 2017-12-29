@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
+  get "users/sign_up"
+  get "users/sign_in"
   resources :products
   
   get 'pages/about'
