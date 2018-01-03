@@ -1,0 +1,74 @@
+<div class="container-fluid">
+ <div class="row">
+ 
+              <div class="panel-heading">
+                  <h2 align="center">Create New Order</h2>
+              </div>
+    <div class="panel-body">
+            <%= form_for([@product, @order]) do |f| %>
+            
+              <% if @order.errors.any? %>
+                <div id="error_explanation" class= "alert alert-danger alert-dismissable"> 
+                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                  <h4><%= pluralize(@order.errors.count, "error") %> prohibited this product from being saved:</h4>
+            
+                  <ul>
+                    <% @order.errors.full_messages.each do |message| %>
+                      <li><%= message %></li>
+                    <% end %>
+                  </ul>
+                </div>
+              <% end %>
+      
+          <div class="col-sm-12">
+          <div class="form-group">
+            
+              <%= f.label :address %><br>
+              <%= f.text_field :address, placeholder: "Address", class: "form-control" %>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="form-group">
+              <%= f.label :city %><br>
+              <%= f.text_field :city, placeholder: "City/Town", class: "form-control" %>
+            </div>
+          </div>
+          <div class="col-sm-8">
+            <div class="form-group">
+              <%= f.label :county %><br>
+              <%= f.text_field :county, placeholder: "County", class: "form-control" %>
+            </div>
+          </div>
+          <div class="col-sm-4">
+              <div class="form-group">
+              <%= f.label :postcode %><br>
+              <%= f.text_field :postcode, placeholder: "Postcode / Zipcode", class: "form-control" %>
+            </div>
+          </div>
+          
+          <div class="col-sm-8">
+            <div class="form-group">
+              <%= f.label :country %><br>
+              <%= f.country_select :country, { priority_countries: ["IE","GB", "FR", "DE"]}, class: "form-control" %>
+            </div>
+          </div>
+          </br>
+          <div class="col-sm-12">
+            <div class="form-group">
+              <%= f.label :phone %><br>
+              <%= f.text_field :phone, placeholder: "Phone number", class: "form-control" %>
+            </div>
+          </div>
+          
+          <div class="center">
+            <div class="form-group">
+              <%= f.submit "Complete Order", class: "btn btn-primary" %>
+            </div>
+          </div>
+        <% end %>
+    </div>
+  </div>  
+</div>
+
+
+

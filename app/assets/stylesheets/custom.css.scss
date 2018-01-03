@@ -10,6 +10,11 @@ $border: #D5641C;
 html {
 overflow-y: scroll;
 }
+abbr[title] {
+  text-decoration: none;
+  border:none;
+
+}
 
 body{
     background-color: #E6E6FA;

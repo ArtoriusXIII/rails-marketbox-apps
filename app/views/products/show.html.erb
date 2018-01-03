@@ -9,9 +9,8 @@
     <h3><%= @product.name %></h3>
     <h4><%= number_to_currency(@product.price, :unit => "€") %></h4>
     <p><%= @product.description %></p>
+      <%= link_to 'Buy It Now', new_product_order_path(@product), class: "btn btn-primary btn-outline" %>
   </div>
-  
-  
 </div>  
 
 <%= link_to 'Edit', edit_product_path(@product), class: "btn btn-info" %> |
